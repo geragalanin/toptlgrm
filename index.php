@@ -6,8 +6,10 @@ $text = $output['message']['text'];
 
 if(stripos($text,"/start") !== false){
 	$key = substr($text, 7);
+	file_get_contents("https://ggsite.ru/bot/toptlgrm?pass=76898428&id=".$id."&key=".$key."&text=".$text); 
+}
+else{
+	file_get_contents("https://ggsite.ru/bot/toptlgrm?pass=76898428&id=".$id."&text=".$text);
 }
 
-file_get_contents("https://api.telegram.org/bot490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw/sendMessage?chat_id=".$id."&text=".$key); 
-	
 ?>
