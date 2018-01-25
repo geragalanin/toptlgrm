@@ -6,10 +6,10 @@ $text = $output['message']['text'];
 
 if(stripos($text,"/start") !== false){
 	$key = substr($text, 7);
-	file_get_contents("http://ggsite.ru/bot/toptlgrm/index.php?pass=76898428&id=".$id."&key=".$key); 
+	file_get_contents("http://ggsite.ru/bot/toptlgrm/bot.php?pass=76898428&id=".$id."&key=".$key); 
 }
 else{
-	file_get_contents("http://ggsite.ru/bot/toptlgrm/index.php?pass=76898428&id=".$id."&text=".urlencode($text));
+	file_get_contents("http://ggsite.ru/bot/toptlgrm/bot.php?pass=76898428&id=".$id."&text=".urlencode($text));
 }
 
 ?>
